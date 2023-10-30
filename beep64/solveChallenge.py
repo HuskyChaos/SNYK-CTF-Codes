@@ -10,7 +10,7 @@ os.chdir('dtmf-decoder/')
 # This gives us an output that looks like 8*222*7*99*444
 dtmf_decoded = subprocess.check_output(['python3','dtmf.py', '../sine.wav'], text=True)
 
-# Converting data from t6 encoding to text. 8 corresponds to t, 222 corresponds to c and so on.
+# Converting data from dialpad encoding to text. 8 corresponds to t, 222 corresponds to c and so on.
 dtmf_decoded = dtmf_decoded.split('*')
 numpad = [['a', 'b', 'c'],['d', 'e', 'f'],['g', 'h', 'i'],['j', 'k', 'l'],
     ['m', 'n', 'o'],['p', 'q', 'r', 's'],['t', 'u', 'v'],['w', 'x', 'y', 'z']
